@@ -197,7 +197,7 @@ body {
 }
 #footer {
     margin-top: 300px;
-    background-image: url(../Raipensivut/images/mehtä.png);
+    background-image: url(images/mehtä.png) ;
     background-repeat: repeat-x; 
     background-position: bottom;
     padding-bottom: 20px;
