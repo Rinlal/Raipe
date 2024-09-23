@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo-menu-container">
+                <img src="images/[removal.ai]_e78c844f-2cce-40d4-83b4-17a6d646bc28-logo.png" alt="" class="Alogo"> <!-- Oletan, että sinulla on logo tiedosto -->
+                <ul class="top-level-menu" id="header">
+                    <li><a href="index.html">ETUSIVU</a></li>
+                    <li><a href="home.html">MINUSTA</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li>
+                        <a href="find.html">LÖYDÄ</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+        </nav>
+        <div class="content-area">
+            <div class="paa1">
+                <h1>Kuka on <span class="korostus">Alina</span> </h1>
+                <br>
+                <p class="leipateksti1">Mukava tutustua! Olen Alina, Hyvinkäältä kotoisin oleva iloinen ja intohimoinen markkinointikoordinaattori, jonka sydän sykkii luovuudelle ja tarinankerronnalle.
+                    Olen suunnitellut ja toteuttanut onnistuneita markkinointikampanjoita eri kanavissa, kuten painetussa, sosiaalisessa ja digitaalisessa mediassa. Lisäksi olen kehittänyt vahvoja viestintä- ja vuorovaikutustaitoja, jotka ovat olleet avainasemassa tiimityössä ja asiakassuhteiden rakentamisessa.
+                    Vapaa-ajallani nautin monipuolisista harrastuksista, kuten matkailusta, liikunnasta ja lukemisesta. Arvoissani myös perhe ja ystävät ovat korkealla. Matkailu avartaa maailmankuvaa ja antaa inspiraatiota luovalle työskentelylle. Urheilu pitää mielen ja kehon virkeänä, ja lukeminen tarjoaa mahdollisuuden jatkuvasti oppia ja kehittyä.
+                    Yhteenvetona voin sanoa olevani energinen ja motivoitunut ihminen, joka pyrkii jatkuvasti kehittymään ja tuomaan uusia ideoita ja näkökulmia työympäristööni. Olen valmis tarttumaan uusiin haasteisiin ja innolla odotan mahdollisuutta tuoda osaamiseni ja intohimoni käyttöön juuri teidän tiiminne. </p>
+                <br>
+                <p class="minotsikko">Tietoteknillinen ydinosaaminen</p>
+              </div>
+              <div class="pilvi">
+                <img src="images/Sanapilvi.png" class="mie" alt=""> <!-- Oletan, että sinulla on toinen kuva tiedosto -->
+            </div>
+        </div>
+    </div>
+    <div class="kuvat">
+      <div>
+          <img class="naytto1" src="images/WhatsApp Image 2024-02-11 at 13.30.14.jpeg" alt=""></a>
+          <span class="otsikko">Illustrator</span>
+      </div>
+      <div>
+          <img class="naytto1" src="images/WhatsApp Image 2024-02-11 at 13.25.24 (1).jpeg" alt=""></a>
+          <span class="otsikko">Indesign</span>
+      </div>
+      <div>
+          <img class="naytto1" src="images/WhatsApp Image 2024-02-11 at 13.25.24.jpeg" alt=""></a>
+          <span class="otsikko">Photoshop</span>
+      </div>        
+  </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopNav");
+                if (x.className === "topNav") {
+                    x.className += "responsive";
+                } else {
+                x.className = "topNav";
+                }
+            }
+        </script>
+        <script>
+            function toggleMenu() {
+                var menu = document.getElementById("header");
+                if (menu.className === "top-level-menu") {
+                    menu.className += " responsive";
+                } else {
+                    menu.className = "top-level-menu";
+                }
+            }
+        </script>    
+    </body>
+    </html>
+    

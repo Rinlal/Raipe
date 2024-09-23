@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #fff;
+}
+
+.container {
+    padding: 30px;
+    /* box-sizing: border-box; */
+    /* height: calc(100vh - 60px); */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Poistetaan navigointipalkin taustaväri */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background: transparent; /* Asetetaan läpinäkyväksi */
+}
+
+.logo-menu-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Säädä logoa pienemmäksi */
+.Alogo {
+    height: 180px; /* Pienennetty korkeus */
+    width: auto;
+    position: absolute;
+    margin-top: 30px;
+    /* margin-right: 20px; Pienennetty marginaali */
+}
+
+.top-level-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 2;
+    justify-content: flex-end;
+}
+
+.top-level-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+/* Tässä korjataan second-level-menu:n toimivuus */
+.top-level-menu li:hover .second-level-menu {
+    display: block; /* Näytä kun viet hiiren päälle */
+    position: absolute; /* Asetetaan absoluuttiseen paikkaan */
+    background: #fff; /* Taustaväriksi valkoinen */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Kevyt varjostus */
+    z-index: 100; /* Varmistetaan, että se on päällimmäisenä */
+}
+
+.top-level-menu a:hover {
+    color: #035928;
+    text-decoration: none;
+}
+
+.content-area {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.paa {
+    width: 50%;
+    margin-top: 100px;
+    padding: 0 30px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+
+.muoto {
+    max-width: 400px;  /* Muodon koko */
+    height: auto;
+    position: absolute;
+    top: 30px; /* Asetetaan samaan kohtaan kuin .mie kuva */
+    right: 10px; /* Asetetaan samaan kohtaan kuin .mie kuva */
+    z-index: 1;
+}
+
+.mie {
+    max-width: 300px; /* henkilön koko */
+    height: auto;
+    position: absolute;
+    z-index: 2;
+}
+/* Palautetaan animaatiot ja korostusvärit */
+.korostus {
+    color: #035928; /* Pinkki korostusväri */
+    animation: haivutus 3s; /* Animaatio palautettu */
+}
+
+@keyframes haivutus {
+    from { 
+        opacity: 0.5; 
+    }
+    to { 
+        opacity: 1; 
+    }
+}
+
+
+.paa h1, .paa p {
+    color: #333; /* Tumma väri parempaa kontrastia varten */
+}
+.hamburger-menu {
+    display: none; /* Hidden by default, shown in mobile view */
+}
+
+.hamburger-menu .icon {
+    display: none; /* Hidden by default, shown in mobile view */
+}
+
+.otsikko {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px; 
+    font-weight: bold;
+    color: #333; 
+}
+.kuvat {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.naytto {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+}
+.naytto:hover {
+    transform: scale(1.1); 
+    box-shadow: 5px 8px 10px; 
+    color: #035928;
+}
+.paa1 {
+    margin-top: 100px;
+    margin-right: 50%;
+    margin-left: 20px;
+}
+.naytto1 {
+    width: 200px; 
+    height: 200px; 
+}
+.naytto1:hover {
+    transform: 0;
+    box-shadow: 0; 
+    color: transparent;
+}
+.minotsikko {
+    font-size: 20px;
+    font-weight: 500;
+}
+.leipateksti1 {
+    margin: 0;
+    padding: 0;
+}
+
+.teksti {
+    margin-left: 268px;
+}
+.pilvi {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50px;
+
+}
+#footer {
+    margin-top: 700px;
+    background-image: url(../Raipensivut/images/mehtä.png);
+    background-repeat: repeat-x; 
+    background-position: bottom;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 100px;
+    color: #ffffff;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    height: 190px;
+}
+
+/* Vastuulliset muutokset pienille näytöille */
+@media (max-width: 1023px) {
+    .navbar {
+        height: auto;
+        justify-content: space-between;
+    }
+
+    .Alogo {
+        margin-right: 0; /* Poistetaan ylimääräinen oikea marginaali */
+        order: 4;
+        height: 120px; /* Pienennetty korkeus */
+    }
+
+    .top-level-menu {
+        display: none;
+        flex-direction: column;
+        margin-left: 60%;
+    }
+
+    .top-level-menu li a {
+        width: 100%;
+    }
+
+    .top-level-menu li a:hover {
+        width: 100%;
+        color: #035928;
+    }
+
+    .top-level-menu.responsive {
+        display: flex; /* Näytä kun hamburger-menua klikataan */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Näytä hamburger-menu */
+        color: #035928;
+    }
+
+    .content-area {
+        flex-direction: column;
+        align-items: left;
+    }
+    .paa1 {
+        align-items: flex-start;
+        position: relative;
+        width: 80%;
+        margin-top: 100px; /* tekstin ja otsikon väli */
+        margin-right: 30px;
+    }
+
+
+    .paa {
+        order: 1;
+    }
+    .muoto {
+        max-width: 160px;  /* Muodon koko */
+        height: auto;
+        position: absolute;
+        z-index: 1;
+        margin-top: 80px;
+    }
+    
+    .mie {
+        max-width: 160px; /* Alpun koko */
+        height: auto;
+        position: absolute;
+        z-index: 2;
+        margin-top: 100px;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Asetetaan näkyväksi kaikissa tiloissa */
+        flex-direction: column;
+        justify-content: space-around;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        z-index: 1000; /* Varmistetaan, että se on päällimmäisenä */
+        border-radius: 5px; /* Pyöristetyt kulmat */
+        padding: 5px; /* Sisätila */
+        margin-right: 50px; /* Säädä hampparin paikkaa */
+        margin-top: 0;
+    }
+    
+    .hamburger-menu .icon {
+        display: block; /* Asetetaan näkyväksi */
+        width: 100%;
+        height: 3px;
+        background-color: #000000; /* Tumma väri näkyvyyden parantamiseksi */
+        transition: all 0.3s ease;     
+        margin-top: 0;   
+    }
+    .icon:hover {
+        background-color: #035928;  
+    }
+    .kuvat {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .pilvi {
+        display: none;   
+    }
+    .linkkari {
+        margin: 0 0 0 0;
+    }
+}
