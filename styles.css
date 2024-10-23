@@ -1,16 +1,20 @@
-body {
+body, html {
+    font-family: sans-serif, Arial, Helvetica;
+    background: #fff;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #E6FBEF;
 }
 
 .container {
-    padding: 30px;
-    /* box-sizing: border-box; */
-    /* height: calc(100vh - 60px); */
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
 }
 
 /* Poistetaan navigointipalkin taustaväri */
@@ -18,8 +22,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    background: transparent; /* Asetetaan läpinäkyväksi */
+    height: 180px;
+    background-color: transparent;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;
+    position: absolute;
 }
 
 .logo-menu-container {
@@ -30,11 +38,10 @@ body {
 
 /* Säädä logoa pienemmäksi */
 .Alogo {
-    height: 180px; /* Pienennetty korkeus */
+    height: 100px; /* Pienennetty korkeus */
     width: auto;
     position: absolute;
-    margin-top: 30px;
-    /* margin-right: 20px; Pienennetty marginaali */
+    /* margin-right: 100px; Pienennetty marginaali */
 }
 
 .top-level-menu {
@@ -91,7 +98,7 @@ body {
     gap: 20px;
     position: absolute;
     right: 30px;
-    top: 0;
+    top: 115px;
 }
 
 .muoto {
@@ -219,8 +226,9 @@ body {
 
     .Alogo {
         margin-right: 0; /* Poistetaan ylimääräinen oikea marginaali */
+        margin-left: 15px;
         order: 4;
-        height: 120px; /* Pienennetty korkeus */
+        height: 80px; /* Pienennetty korkeus */
     }
 
     .top-level-menu {
@@ -268,7 +276,7 @@ body {
         height: auto;
         position: absolute;
         z-index: 1;
-        margin-top: 80px;
+        margin-top: 800px;
     }
     
     .mie {
@@ -276,7 +284,7 @@ body {
         height: auto;
         position: absolute;
         z-index: 2;
-        margin-top: 100px;
+        margin-top: 10px;
     }
 
     .hamburger-menu {
@@ -315,4 +323,10 @@ body {
     .linkkari {
         margin: 0 0 0 0;
     }
+    /* .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+        background: transparent; /* Asetetaan läpinäkyväksi */
 }
